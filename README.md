@@ -2,6 +2,8 @@
 Group: BT23CSE006 Bhumika Ujjainkar · BT23CSE015 Arjun Jaishankar · BT23CSE039 Daksh Rathore · BT23CSE056 Puram Shravya
 All data is **simulated** for academic demonstration.
 
+🚀 **Live Dashboard:** [https://d4a1k11s19h8.github.io/bi-inventory/](https://d4a1k11s19h8.github.io/bi-inventory/)
+
 ## Pipeline
 `tools/simulate_source.js` (ERP/WMS stand-in) → `data/raw/*.csv` → `etl/run_etl.py` (extract → validate → transform → load → serve) → `data/warehouse/*.csv` + `inventory_dw.db` (star schema) → `web/data.json` → `web/index.html` (static HTML + D3, no backend).
 
