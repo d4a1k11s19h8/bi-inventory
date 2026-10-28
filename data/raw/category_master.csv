@@ -1,0 +1,7 @@
+category_id,category_name,short_name,shelf_life_days
+STP,Staples,Staples,0
+OIL,Edible oils,Oils,0
+PKG,Packaged foods,Packaged,0
+BEV,Beverages,Beverages,0
+DRY,Dairy & chilled,Dairy,21
+HCP,Home & personal care,Home care,0

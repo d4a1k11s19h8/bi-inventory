@@ -1,0 +1,146 @@
+{
+  "run_utc": "2026-10-27T19:01:13+00:00",
+  "seconds": 4.5,
+  "rows": {
+    "dim_date": 620,
+    "dim_sku": 120,
+    "dim_warehouse": 6,
+    "dim_supplier": 20,
+    "bridge_sku_supplier": 397,
+    "dim_sku_class_history": 130,
+    "fact_stock_movement_daily": 403200,
+    "fact_stock_snapshot_weekly": 57600,
+    "fact_purchase_order_line": 12257,
+    "agg_weekly_category_warehouse": 2880,
+    "current_position": 720,
+    "stock_batch_current": 779,
+    "sku_location_class": 720
+  },
+  "checks": [
+    {
+      "check": "master keys are unique",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "every SKU maps to a known category and supplier",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no nulls in movement keys/measures",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no duplicate (date, sku, warehouse) rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "complete grid: SKUs x warehouses x days",
+      "status": "PASS",
+      "detail": "403,200 = 403,200"
+    },
+    {
+      "check": "no negative quantities",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "sales never exceed demand",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "stock balance: closing = previous closing + receipts - sales - write-off",
+      "status": "PASS",
+      "detail": "402,480 day-rows tested"
+    },
+    {
+      "check": "PO lines: received on/after ordered, qty received <= ordered",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "sourcing: every SKU has 1-5 suppliers and exactly one primary",
+      "status": "PASS",
+      "detail": "397 SKU-supplier terms, 5 max per SKU"
+    },
+    {
+      "check": "sourcing: allocation shares sum to 1 per SKU",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "sourcing: primary supplier in terms = primary_supplier_id in SKU master",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "every PO line is placed with an approved supplier of that SKU at its quoted price",
+      "status": "PASS",
+      "detail": "12,257 PO lines"
+    },
+    {
+      "check": "WMS batch report ties to stock ledger at as-of date",
+      "status": "PASS",
+      "detail": "max diff 0"
+    },
+    {
+      "check": "foreign key weekly -> dim_sku",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key weekly -> dim_warehouse",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key weekly -> dim_date",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key daily -> dim_date",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key po -> dim_supplier",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key po -> bridge_sku_supplier",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key bridge -> dim_sku / dim_supplier",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "foreign key po -> dim_date (order)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "weekly snapshot reconciles to daily transactions (sales, demand, receipts)",
+      "status": "PASS",
+      "detail": "(8574493, 8606943, 8558346)"
+    },
+    {
+      "check": "aggregate fact reconciles to detailed fact (sales value)",
+      "status": "PASS",
+      "detail": "1,816,238,368"
+    },
+    {
+      "check": "data.json totals equal warehouse totals (sales units)",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

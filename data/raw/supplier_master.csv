@@ -1,0 +1,21 @@
+supplier_id,supplier_name,short_name,planned_lead_time_days,planned_lead_time_sd_days
+SUP-1,Gujarat Edible Oils Ltd,Gujarat Oils,5,1
+SUP-2,Vidarbha Agro Mills,Vidarbha Agro,4,1
+SUP-3,Sahyadri Dairy Co-op,Sahyadri Dairy,2,0.5
+SUP-4,Deccan Beverages Pvt Ltd,Deccan Bev.,6,1
+SUP-5,Malwa Foods & Spices,Malwa Foods,7,1.2
+SUP-6,Bharat FMCG Distributors,Bharat FMCG,3,0.8
+SUP-7,Konkan Home Care Ltd,Konkan HC,5,1
+SUP-8,Telangana Rice & Pulses,Telangana R&P,6,1.2
+SUP-9,Rajasthan Grain Traders,Rajasthan Grain,5,1
+SUP-10,Punjab Agro Foods,Punjab Agro,6,1.1
+SUP-11,Hyderabad Pulses Co.,Hyd Pulses,3,0.8
+SUP-12,Kerala Coconut Oil Mills,Kerala Oil,8,1.5
+SUP-13,Maharashtra Oil Refiners,MH Refiners,4,0.9
+SUP-14,Nashik Fruit Beverages,Nashik Bev.,4,1
+SUP-15,Malwa Milk Union,Malwa Milk,3,0.6
+SUP-16,Pune Packaged Foods Ltd,Pune Packaged,5,1
+SUP-17,Coastal Dairy Works,Coastal Dairy,2,0.5
+SUP-18,Indus Home Products,Indus Home,4,1
+SUP-19,Sagar Beverages,Sagar Bev.,7,1.3
+SUP-20,Eastern Care Industries,Eastern Care,6,1.2
